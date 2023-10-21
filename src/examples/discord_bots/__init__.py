@@ -3,5 +3,5 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 """
-Events which your IOConfig can produce/consume.
+Classes for providing examples for mewbot-io-discord.
 """
