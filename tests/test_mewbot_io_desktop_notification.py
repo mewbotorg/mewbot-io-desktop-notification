@@ -8,7 +8,10 @@
 Contains tests for mewbot-desktop-notification.
 """
 
-from mewbot.io.desktop_notification import DesktopNotificationIO, DesktopNotificationOutput
+from mewbot.io.desktop_notification import (
+    DesktopNotificationIO,
+    DesktopNotificationOutput,
+)
 
 
 class TestDesktopNotificationAPI:
