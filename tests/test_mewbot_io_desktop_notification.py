@@ -8,7 +8,7 @@
 Contains tests for mewbot-desktop-notification.
 """
 
-from mewbot.io.desktop_notification import DesktopNotificationIO
+from mewbot.io.desktop_notification import DesktopNotificationIO, DesktopNotificationOutput
 
 
 class TestDesktopNotificationAPI:
@@ -37,3 +37,17 @@ class TestDesktopNotificationAPI:
         """
         test_io_config = DesktopNotificationIO()
         assert test_io_config is not None
+
+    @staticmethod
+    def test_enable_and_disable() -> None:
+        """
+        Tests enabling and disabling the IOConfig.
+
+        :return:
+        """
+        test_io_config = DesktopNotificationIO()
+        test_io_config_outputs = test_io_config.get_outputs()
+        assert len(test_io_config_outputs) == 1
+
+        test_io_config_output = test_io_config_outputs[0]
+        assert isinstance(test_io_config_output, DesktopNotificationOutput)
